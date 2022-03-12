@@ -10,4 +10,22 @@
 export default /** @type {import('astro').AstroUserConfig} */ ({
 	// Enable the Vue renderer to support Vue components.
 	renderers: ['@astrojs/renderer-vue'],
+  buildOptions: {
+    site: 'https://kissu.io', // Used to generate sitemaps and canonical URLs.
+    sitemap: true,
+  },
+  devOptions: {
+    port: 7777,
+  },
+  vite: {
+    plugins: [],
+    resolve: {
+        alias: [
+          { find: '@', replacement: '/src' }
+        ]
+    },
+    // optimizeDeps: {
+    //     allowNodeBuiltins: true
+    // }
+  }
 });
