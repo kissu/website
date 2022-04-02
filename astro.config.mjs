@@ -6,10 +6,12 @@
 // helpful tooltips, and warnings if your exported object is invalid.
 // You can disable this by removing "@ts-check" and `@type` comments below.
 
+import vue from '@astrojs/vue'
+
 // @ts-check
 export default /** @type {import('astro').AstroUserConfig} */ ({
 	// Enable the Vue renderer to support Vue components.
-	renderers: ['@astrojs/renderer-vue'],
+  integrations: [vue()],
   buildOptions: {
     site: 'https://kissu.io', // Used to generate sitemaps and canonical URLs.
     sitemap: true,
