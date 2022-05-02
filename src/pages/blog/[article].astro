@@ -1,0 +1,32 @@
+---
+import BaseLayout from '~/layouts/BaseLayout.astro'
+import { Debug } from 'astro/components';
+
+let posts
+
+export async function getStaticPaths() {
+  posts = await Astro.glob('./articles/*.md')
+  console.log('posts', JSON.parse(JSON.stringify(posts[0])))
+
+  return [
+    { params: { article: posts[0].frontmatter.url } },
+  ]
+}
+const { article } = Astro.params
+console.log('x', article)
+---
+
+<BaseLayout>
+  <!-- <Debug {posts} /> -->
+  <pre>{ article }</pre>
+</BaseLayout>
+<!-- <div>article: { article }</div>
+<div>
+{posts.slice(0, 3).map((post) => (
+  <article>
+    <h1>{post.frontmatter.title}</h1>
+    <p>{post.frontmatter.description}</p>
+    <a href={post.frontmatter.url}>Read more</a>
+  </article>
+))}
+</div> -->

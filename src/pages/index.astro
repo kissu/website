@@ -1,12 +1,28 @@
 ---
 import BaseLayout from '~/layouts/BaseLayout.astro'
+import { Code } from 'astro/components'
 ---
 
 <BaseLayout>
   <p>Hello, it's me: kissu!</p>
 </BaseLayout>
 
-<style>
+<Code code={`
+<template>
+  <div class="inputs">
+    <label class="inputs__label" :for="name">Имя</label>
+    <input
+      v-click-outside="moveR"
+      class="inputs__input"
+      :name="name"
+      type="text"
+      @click="moveL($event.target)"
+    />
+  </div>
+</template>
+`} lang="html" wrap />
+
+<style lang="css">
   p {
     color: hsl(0deg, 0%, 100%);
     font-size: 2rem;

@@ -16,6 +16,9 @@
       "~/*": ["./src/*"]
     }
   },
+  "vueCompilerOptions": {
+    "experimentalDisableTemplateSupport": true,
+  },
   "exclude": [
     "dist",
     "node_modules"
