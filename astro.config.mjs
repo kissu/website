@@ -36,9 +36,6 @@ export default defineConfig({
   },
   vite: {
     plugins: [],
-    resolve: {
-      alias: [{ find: '@', replacement: '/src' }],
-    },
     optimizeDeps: {
       allowNodeBuiltins: true,
     },

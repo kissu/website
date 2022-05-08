@@ -1,26 +1,48 @@
 {
   "compilerOptions": {
     "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "types": ["vite/client"],
+    "isolatedModules": true,
     "allowJs": true,
     "baseUrl": ".",
     "module": "ESNext",
     "target": "ESNext",
     "lib": [
-        "DOM",
-        "ESNext"
+      "DOM",
+      "ESNext"
     ],
     "esModuleInterop": true,
     "incremental": false,
     "skipLibCheck": true,
     "paths": {
-      "~/*": ["./src/*"]
+      "~/*": [
+        "./src/*"
+      ],
+      "articles/*": [
+        "./articles/*"
+      ],
+      "comp/*": [
+        "./src/components/*"
+      ],
+      "style/*": [
+        "./src/assets/style/*"
+      ],
+      "layouts/*": [
+        "./src/layouts/*"
+      ],
+      "images/*": [
+        "./src/images/*"
+      ],
     }
   },
   "vueCompilerOptions": {
-    "experimentalDisableTemplateSupport": true,
+    "experimentalDisableTemplateSupport": true
   },
   "exclude": [
+    "./*.{mjs,js,cjs}",
     "dist",
-    "node_modules"
+    "node_modules",
+    "**/*.{md,astro}",
   ]
 }
