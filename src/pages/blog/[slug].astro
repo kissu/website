@@ -1,0 +1,14 @@
+---
+export async function getStaticPaths({ paginate, rss }) {
+  const articles = await Astro.glob('/articles/*.md')
+
+  return articles.map(article => {
+    return { params: { slug: article.frontmatter.slug }, props: { article } }
+  })
+}
+const { slug } = Astro.params
+const { article: { Content } } = Astro.props
+// Astro.redirect('/404') //! hm okay..
+---
+
+<div>hi there <Content /></div>

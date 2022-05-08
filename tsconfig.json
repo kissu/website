@@ -1,9 +1,15 @@
 {
   "compilerOptions": {
+    // Enable node-style module resolution, for things like npm package imports.
     "moduleResolution": "node",
+    // Enable JSON imports.
     "resolveJsonModule": true,
-    "types": ["vite/client"],
+    // Enable stricter transpilation for better output.
     "isolatedModules": true,
+    // Add type definitions for our Vite runtime.
+    "types": [
+      "vite/client"
+    ],
     "allowJs": true,
     "baseUrl": ".",
     "module": "ESNext",

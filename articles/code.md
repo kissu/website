@@ -3,7 +3,8 @@ layout: ~/layouts/BlogLayout.astro
 title: hehe boiixx
 how: very
 setup: |
-  import Counter from '@/components/Counter.vue'
+  import Counter from 'comp/Counter.vue'
+slug: code
 ---
 
 ## Hello
@@ -13,6 +14,7 @@ setup: |
 I'm a {frontmatter.how} tasty test
 
 `nuxt.config.js`
+
 ```vue
 <template>
   <div>
@@ -36,7 +38,7 @@ export default {
   async asyncData({ $axios }) {
     const pokemon = await $axios.$get('https://pokeapi.co/api/v2/pokemon/charizard')
     return { pokemon }
-  }
+  },
 }
 </script>
 
