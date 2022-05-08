@@ -1,3 +1,4 @@
+/* eslint-env node */
 module.exports = {
   ci: {
     upload: {
@@ -10,4 +11,4 @@ module.exports = {
       ]
     }
   },
-};
+}

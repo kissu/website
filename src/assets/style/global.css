@@ -1,3 +1,32 @@
+:root {
+  --astro-code-color-text: #fff;
+  --astro-code-color-background: #151f28;
+  --astro-code-token-constant: #44dfff;
+  --astro-code-token-string: #aaed36;
+  --astro-code-token-function: #aaed36;
+  --astro-code-token-keyword: #ff006a;
+  --astro-code-token-string-expression: #ff006a;
+  --astro-code-token-comment: #6e7d9a;
+
+  /* unkown values */
+  --astro-code-token-parameter: lime;
+  --astro-code-token-punctuation: lime;
+  --astro-code-token-link: lime;
+}
+
+/* for things like `App.vue` above a code snippet */
+p code {
+  color: #f5af19;
+  font-size: 1.2rem;
+}
+
+.astro-code {
+  border: 1px solid #f5af19;
+  padding: 1.5rem;
+  border-radius: 0.3rem;
+}
+
 body {
-  background-color: hsl(212.3, 31.7%, 8%);
+  background-color: hsl(212.3deg 31.7% 8%);
+  color: #dfdfdf;
 }
