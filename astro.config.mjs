@@ -29,10 +29,23 @@ export default defineConfig({
   //   rehypePlugins: [['rehype-toc', { headings: ['h2', 'h3'] }], [addClasses, { 'h1,h2,h3': 'title' }], 'rehype-slug']
   // },
   markdown: {
+    //* set to true if we want all the drafts in the final build
+    drafts: false,
+    syntaxHighlight: 'shiki',
     // '@astrojs/markdown-remark',
     shikiConfig: {
+      //* https://github.com/shikijs/shiki/blob/main/docs/themes.md#all-themes
+      //* custom theme used, based on https://github.com/markthomasmiller/sorcerer
       theme: 'css-variables',
+      //* Enable word wrap to prevent horizontal scrolling
+      wrap: true,
     },
+    remarkPlugins: ['remark-code-titles', ['rehype-autolink-headings', { behavior: 'prepend' }]],
+    rehypePlugins: [
+      // ['rehype-toc', { headings: ['h2', 'h3'] }],
+      // [addClasses, { 'h1,h2,h3': 'title' }],
+      'rehype-slug',
+    ],
   },
   vite: {
     plugins: [],
