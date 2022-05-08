@@ -4,5 +4,11 @@ module.exports = {
     upload: {
       target: 'temporary-public-storage',
     },
+    collect: {
+      url: [
+        'https://kissu.io',
+        'https://kissu.io/test',
+      ]
+    }
   },
 }
