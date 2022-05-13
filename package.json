@@ -16,6 +16,7 @@
     "@vue/eslint-config-prettier": "^7.0.0",
     "astro": "^1.0.0-beta.27",
     "autoprefixer": "^10.4.7",
+    "cloudinary-build-url": "^0.2.4",
     "eslint": "^8.15.0",
     "eslint-plugin-vue": "^8.7.1",
     "postcss": "^8.4.13",

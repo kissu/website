@@ -1,8 +1,26 @@
 ---
 import BaseLayout from 'layouts/BaseLayout.astro'
 import { Markdown } from 'astro/components';
+import { buildImageUrl } from 'cloudinary-build-url'
+
+const src = buildImageUrl('website/amste', { cloud: {
+  cloudName: 'kissu',
+},   transformations: {
+    resize: {
+      type: 'scale',
+      width: 500,
+      height: 500,
+    }
+  }})
+console.log('nice', src)
 ---
 
 <Markdown>
 # This is about me mainly, what I'm doing etc
 </Markdown>
+
+<img src={src} alt="hehe non :)" />
+
+<p>
+Those people will be discarded anyway
+</p>
