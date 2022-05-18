@@ -5,6 +5,12 @@ module.exports = {
   env: {
     'vue/setup-compiler-macros': true,
   },
+  overrides: [
+    {
+      files: ['*.astro'],
+      parser: 'astro-eslint-parser',
+    },
+  ],
   rules: {
     'vue/multi-word-component-names': 'off',
   },

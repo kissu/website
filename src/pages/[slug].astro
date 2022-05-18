@@ -1,9 +1,7 @@
 ---
 import twitterImage from 'images/twitter.jpg'
 export function getStaticPaths() {
-  return [
-    { params: {slug: 'test-url'} }
-  ];
+  return [{ params: { slug: 'test-url' } }]
 }
 
 const { slug } = Astro.params
@@ -12,4 +10,4 @@ const { slug } = Astro.params
 <p>This is some top level slug test</p>
 
 <img src={twitterImage} alt="twitter" />
-<div>nothing found here { slug }</div>
+<div>nothing found here {slug}</div>

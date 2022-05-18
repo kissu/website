@@ -3,8 +3,10 @@ lockfileVersion: 5.4
 specifiers:
   '@astrojs/sitemap': ^0.1.0
   '@astrojs/vue': ^0.1.3
+  '@typescript-eslint/types': ^5.23.0
   '@vue/eslint-config-prettier': ^7.0.0
   astro: ^1.0.0-beta.27
+  astro-eslint-parser: ^0.0.16
   astro-icon: ^0.7.1
   autoprefixer: ^10.4.7
   cloudinary-build-url: ^0.2.4
@@ -29,8 +31,10 @@ dependencies:
 
 devDependencies:
   '@astrojs/vue': 0.1.4_vue@3.2.33
+  '@typescript-eslint/types': 5.23.0
   '@vue/eslint-config-prettier': 7.0.0_bppm6sp3oxoychvfagx6tcd7pe
   astro: 1.0.0-beta.28
+  astro-eslint-parser: 0.0.16
   autoprefixer: 10.4.7_postcss@8.4.13
   cloudinary-build-url: 0.2.4
   eslint: 8.15.0
@@ -596,6 +600,11 @@ packages:
     resolution: {integrity: sha512-PBjIUxZHOuj0R15/xuwJYjFi+KZdNFrehocChv4g5hu6aFroHue8m0lBP0POdK2nKzbw0cgV1mws8+V/JAcEkQ==}
     dev: true
 
+  /@typescript-eslint/types/5.23.0:
+    resolution: {integrity: sha512-NfBsV/h4dir/8mJwdZz7JFibaKC3E/QdeMEDJhiAE3/eMkoniZ7MjbEMCGXw6MZnZDMN3G9S0mH/6WUIj91dmw==}
+    engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
+    dev: true
+
   /@vitejs/plugin-vue/2.3.3_vite@2.9.9+vue@3.2.33:
     resolution: {integrity: sha512-SmQLDyhz+6lGJhPELsBdzXGc+AcaT8stgkbiTFGpXPe8Tl1tJaBw1A6pxDqDuRsVkD8uscrkx3hA7QDOoKYtyw==}
     engines: {node: '>=12.0.0'}
@@ -835,6 +844,18 @@ packages:
   /astral-regex/2.0.0:
     resolution: {integrity: sha512-Z7tMw1ytTXt5jqMcOP+OQteU1VuNK9Y02uuJtKQ1Sv69jXQKKg5cibLwGJow8yzZP+eAc18EmLGPal0bp36rvQ==}
     engines: {node: '>=8'}
+    dev: true
+
+  /astro-eslint-parser/0.0.16:
+    resolution: {integrity: sha512-5+PbQjix4EZN4YtfG1/dZzhTpfFvsBJqeDPRvh9ohrBo0d6LCQqdjO1b2oldH14N9RTsTmWggDNdWCvlODcoYw==}
+    engines: {node: ^14.17.0 || >=16.0.0}
+    dependencies:
+      '@astrojs/compiler': 0.14.2
+      debug: 4.3.4
+      eslint-visitor-keys: 3.3.0
+      espree: 9.3.2
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   /astro-icon/0.7.1:

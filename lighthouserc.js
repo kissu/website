@@ -5,10 +5,7 @@ module.exports = {
       target: 'temporary-public-storage',
     },
     collect: {
-      url: [
-        'https://kissu.io',
-        'https://kissu.io/test',
-      ]
-    }
+      url: ['https://kissu.io', 'https://kissu.io/test'],
+    },
   },
 }

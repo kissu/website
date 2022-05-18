@@ -1,6 +1,3 @@
----
-import BaseLayout from 'layouts/BaseLayout.astro'
-    import { Markdown } from 'astro/components'
 import { buildImageUrl } from 'cloudinary-build-url'
 
 const src = buildImageUrl('website/amste', {
@@ -16,12 +13,3 @@ const src = buildImageUrl('website/amste', {
   },
 })
 console.log('nice', src)
----
-
-<Markdown>
-  # This is about me mainly, what I'm doing etc
-</Markdown>
-
-<img {src} alt="hehe non :)" />
-
-<p>Those people will be discarded anyway</p>
